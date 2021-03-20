@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="shortcut icon" href="./img/favicon (2).ico " type="image/x-icon">
+    <title>Coffeedo</title>
+
+</head>
+<body>
+    <nav class="nav">
+        <ul class="nav-items">
+            <li class="nav-item main-item"><a href="#home">Coffeedo</a> <i class="fas fa-bars float-right"></i></li>
+            <li class="nav-item"><a href="#about">About</a></li>
+            <li class="nav-item"><a href="#history">History</a></li>
+        </ul>
+    </nav>
+    <div class="grid">
+        <div id="home" class="photo">
+            <div class="content">
+                <h2>Coffeedo</h2>
+                <p>We make coffee even better</p>
+            </div>
+        </div>
+
+        <div id="about"><h2 class="fontSize-30">About</h2></div>
+        <div class="aboutBoxes">
+            <div class="aboutBox">
+                <i class="fas fa-mug-hot"></i>
+                <h3>Quality</h3>
+                <p>Quality is our main focus, because we love coffee as much as you do.</p>
+            </div>
+            <div class="aboutBox">
+                <i class="far fa-clock"></i>
+                <h3>Time</h3>
+                <p>We known how valuable your time is, so we make sure your coffee is made as fast as possible.</p>
+            </div>
+            <div class="aboutBox">
+                <i class="fas fa-coffee"></i>
+                <h3>Variety</h3>
+                <p>We have a wide range of products, something for everyone. Come and see what you like.</p>
+            </div>
+        </div>
+
+        <div id="history"><h2 class="fontSize-30">History</h2></div>
+        <div class="historyRow">
+            <div class="historyText"><p>We started our business over <span class="highlight">15 years</span>  ago. Since then we made our priority to deliver <span class="highlight">the best coffee</span> the best coffee possible. We have over <span class="highlight">100 stores</span>  all over the world. </p></div>
+            <div class="historyImg"><img src="/img/pexels-viktoria-alipatova-2074130 (1).jpg" alt="" ></div>
+        </div>
+        <footer>
+            <p>Coffeedo &#9400;	 2021</p>
+        </footer>
+    </div>
+
+    <script>
+        let items=document.getElementsByClassName('nav-item');
+        document.body.getElementsByClassName("fa-bars")[0].addEventListener('click', ()=>{
+            if(items[1].style.display=='none' || items[1].style.display==''){ 
+                for(let i=1; i<items.length; i++){
+                    items[i].style.display='flex';
+                }
+            }
+            else{
+                for(let i=1; i<items.length; i++){
+                    items[i].removeAttribute('style');
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
